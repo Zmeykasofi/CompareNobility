@@ -44,7 +44,7 @@ public class Person implements Comparable<Person> {
         char[] symbols = surname.toCharArray();
         for (int i = 0; i < symbols.length; i++) {
             if (symbols[i] == ' ' || symbols[i] == '-') {
-                numberWords ++;
+                numberWords++;
             }
         }
         return numberWords;
