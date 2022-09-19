@@ -13,28 +13,28 @@ class PersonSurnameLengthComparatorTest {
 
     @DisplayName("Тестирование сравнения людей с одинаковым возрастом и кол-вом слов в фамилии")
     @Test
-    public void testEqualSameAge() {
+    void testEqualSameAge() {
         int result = surnameCompare.compare(person2, person3);
         Assertions.assertEquals(0, result);
     }
 
     @DisplayName("Тестирование сравнения людей с разным возрастом и кол-вом слов в фамилии")
     @Test
-    public void testGreaterThan() {
+    void testGreaterThan() {
         int result = surnameCompare.compare(person1, person3);
         Assertions.assertEquals(1, result);
     }
 
     @DisplayName("Тестирование сравнения людей с разным возрастом и одниковым кол-вом слов в фамилии больше максимального")
     @Test
-    public void testGreaterThanMoreMax() {
+    void testGreaterThanMoreMax() {
         int result = surnameCompare.compare(person5, person4);
         Assertions.assertEquals(1, result);
     }
-    
+
     @DisplayName("Тестирование сравнения людей с разным возрастом и кол-вом слов в фамилии")
     @Test
-    public void testLessThan() {
+    void testLessThan() {
         int result = surnameCompare.compare(person2, person1);
         Assertions.assertTrue(result <= -1);
     }
